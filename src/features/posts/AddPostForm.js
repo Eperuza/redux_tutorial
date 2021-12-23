@@ -24,11 +24,7 @@ export const AddPostForm = () => {
   const onSavePostClicked = () => {
     if (title && content) {
       dispatch(
-        postAdded({
-          id: nanoid(), //redux function to generate an id for us
-          title,
-          content
-        })
+        postAdded(title, content)
       )
     //reset the fields
     setTitle('') 
