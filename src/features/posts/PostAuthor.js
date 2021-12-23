@@ -3,10 +3,13 @@ import {useSelector} from 'react-redux'
 
 export const PostAuthor = ({userId}) => {
 
+
   const author = useSelector(state => {
-    state.users.find(user => user.id === userId)
+    return state.users.find((user) => user.id === userId)
   })
-  
+
+  {console.log('generating author', author)} //getting undefined
+
   return (
     <span>by {author ? author.name : 'Unknown author'}</span>
   )
