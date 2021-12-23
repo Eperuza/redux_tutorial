@@ -8,8 +8,6 @@ export const PostAuthor = ({userId}) => {
     return state.users.find((user) => user.id === userId)
   })
 
-  {console.log('generating author', author)} //getting undefined
-
   return (
     <span>by {author ? author.name : 'Unknown author'}</span>
   )
